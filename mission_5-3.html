@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>mission_5-3</title>
+  </head>
+  <body>
+    <button id = drawbutton
+    onclick="drawFortune()">おみくじを引く</button>
+
+    <script>
+      function drawFortune() {
+        var x = Math.random();
+        var result; 
+
+        if (x >= 0.9) {
+          result = "大吉"; 
+        } else if (x >= 0.55) {
+          result = "中吉";
+        } else if (x >= 0.2) {
+          result = "小吉"; 
+        } else {
+          result = "凶"; 
+        }
+        
+        const obj = document.getElementById("drawbutton");
+        obj.innerText = 'もう一度おみくじを引く';
+        obj.style.color = "blue";
+
+
+        alert(result);
+      }
+       
+
+    </script>
+  </body>
+</html>
