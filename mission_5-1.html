@@ -9,7 +9,7 @@
     <div id="HokkaidoWeather">ここに表示</div>
  
     <script>
-      fetch('')
+      fetch('天気予報のAPI')
         .then((response) => response.json())
         .then((data) => {
           const tomorrow = data.forecasts[1];
@@ -23,3 +23,4 @@
   </body>
 
 </html>
+
